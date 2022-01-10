@@ -1,0 +1,16 @@
+{
+  "private": false,
+  "name": "gulp-vfm",
+  "version": "0.0.1",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiganix/gulp-vfm.git"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/kiganix/gulp-vfm/issues"
+  },
+  "homepage": "https://github.com/kiganix/gulp-vfm#readme"
+}
