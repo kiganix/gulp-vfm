@@ -2,8 +2,7 @@
   "private": false,
   "name": "gulp-vfm",
   "version": "0.0.1",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kiganix/gulp-vfm.git"
@@ -12,5 +11,8 @@
   "bugs": {
     "url": "https://github.com/kiganix/gulp-vfm/issues"
   },
-  "homepage": "https://github.com/kiganix/gulp-vfm#readme"
+  "homepage": "https://github.com/kiganix/gulp-vfm#readme",
+  "volta": {
+    "node": "16.13.1"
+  }
 }
