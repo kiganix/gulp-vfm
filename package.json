@@ -14,5 +14,13 @@
   "homepage": "https://github.com/kiganix/gulp-vfm#readme",
   "volta": {
     "node": "16.13.1"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "vinyl": "^2.2.1"
+  },
+  "devDependencies": {
+    "@types/gulp": "^4.0.9",
+    "@types/vinyl": "^2.0.6"
   }
 }
