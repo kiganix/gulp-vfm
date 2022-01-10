@@ -38,3 +38,4 @@ function isVinylFile(chunk: any): chunk is File {
 }
 
 export default plugin
+module.exports = plugin
