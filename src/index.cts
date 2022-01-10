@@ -6,10 +6,18 @@ import PluginError from 'plugin-error'
 
 const PLUGIN_NAME = 'gulp-vfm'
 
-export type GulpVfmPlugin = (vfmOptions?: StringifyMarkdownOptions, vfmMetadata?: Metadata) => stream.Transform
+export type Options = {
+  vfmOptions?: StringifyMarkdownOptions,
+  vfmMetadata?: Metadata,
+  extname?: string,
+}
 
-const plugin: GulpVfmPlugin = (vfmOptions?, vfmMetadata?) => {
-  const processor = VFM(vfmOptions, vfmMetadata)
+export type GulpVfmPlugin = (
+  options?: Options,
+) => stream.Transform
+
+const plugin: GulpVfmPlugin = (options?) => {
+  const processor = VFM(options?.vfmOptions, options?.vfmMetadata)
 
   return through2.obj((chunk, enc, cb) => {
     if (!isVinylFile(chunk)) {
@@ -20,6 +28,7 @@ const plugin: GulpVfmPlugin = (vfmOptions?, vfmMetadata?) => {
     const result = processor.processSync(source).toString()
 
     chunk.contents = Buffer.from(result)
+    chunk.extname = options?.extname ?? '.html'
     return cb(null, chunk)
   })
 }
